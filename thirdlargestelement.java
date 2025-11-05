@@ -2,7 +2,7 @@ public class thirdlargestelement
 {
     public static void main(String[] args) 
     {
-        int[]arr = {4,8,6,9,7};
+        int[]arr = {4,8,8,9,7};
         int fmax = 0;
         int smax = 0;
         int tmax = 0;
@@ -13,11 +13,11 @@ public class thirdlargestelement
                 tmax = smax;
                 smax = fmax;
                 fmax = arr[i];
-            }else if(arr[i]>smax)
+            }else if(arr[i]>smax && arr[i]!=fmax)
             {
                 tmax = smax;
                 smax = arr[i];
-            }else if(arr[i]>tmax)
+            }else if(arr[i]>tmax && arr[i]!=fmax && arr[i]!=smax)
             {
                 tmax = arr[i];
             }
